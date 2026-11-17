@@ -33,6 +33,7 @@ services:
       JWT_SECRET: ${JWT_SECRET:-sensor-bootstrap-development-only}
       SEED_DEMO: ${SEED_DEMO:-true}
       ARTIFACT_DIR: /artifacts
+      FIELD_SYSTEM_URL: ${FIELD_SYSTEM_URL:-http://backend:8000/field-api}
     ports: ["${BACKEND_PORT:-19206}:8000"]
     volumes: ["analysis-artifacts:/artifacts"]
     depends_on:
